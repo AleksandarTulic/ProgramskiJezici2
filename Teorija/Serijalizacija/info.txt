@@ -1,0 +1,20 @@
+SERIJALIZACIJA je proces pretvranja objekta u sekvencu bajtova na osnovu kojih se kasnije moze izvrsiti rekonstrukcija
+originalnog objekta
+
+DESERIJALIZACIJA kreiranje originalnog objekta na osnovu prethodno smjestene sekvence
+
+Ovi postupci treba da rade i kada neki objekat referncira drugi, cak i ako govorimo o stablu
+
+USLOV serijalizacije:
+  - treba implementirati Serializable interface
+  - parametri metoda i atributi takodje serijazibilni
+Koristimo:
+  - ObjectInput baca IOException | EOFException (End of file)EOF
+  - ObjectOutput baca IOException
+  
+Mreza Objekata - Serijalizacija cuvanje referenci izmedju njih  
+
+Kreirati OutputStream objekta i okruziti ga ObjectOutputStream objektom
+Kreiranje InputStrem - a i okruziti ga ObjectInputStream objektom
+
+Posto je Object klasa nadklasa svim ostalima potrebno je da se prilikom input-a transformise u odgvarajuci objekat neke klase
