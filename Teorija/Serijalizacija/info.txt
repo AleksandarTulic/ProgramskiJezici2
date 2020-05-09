@@ -18,3 +18,6 @@ Kreirati OutputStream objekta i okruziti ga ObjectOutputStream objektom
 Kreiranje InputStrem - a i okruziti ga ObjectInputStream objektom
 
 Posto je Object klasa nadklasa svim ostalima potrebno je da se prilikom input-a transformise u odgvarajuci objekat neke klase
+
+Ukoliko je neka klasa trece partije a ne treba nam da bude serijalizovano onda je OZNACIMO SA: transient
+kao ni staticna polja - jer ovaj proces se vrsi nad objektom a static je posebno
