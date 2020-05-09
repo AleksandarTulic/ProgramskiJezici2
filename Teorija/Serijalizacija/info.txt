@@ -21,3 +21,9 @@ Posto je Object klasa nadklasa svim ostalima potrebno je da se prilikom input-a 
 
 Ukoliko je neka klasa trece partije a ne treba nam da bude serijalizovano onda je OZNACIMO SA: transient
 kao ni staticna polja - jer ovaj proces se vrsi nad objektom a static je posebno
+
+Externalizable interface
+  - readExternal()
+  - writeExternal()
+Implementiraju posebno koje vrijednosti objekta se serijalizuju tj mora se ekplicitno napomenuti
+Ovakva serijalizacija zahtjeva bez argumenata konstruktor
