@@ -1,0 +1,3 @@
+Racunar 3305.0
+Monitor 800.0
+Telefon 1399.0
