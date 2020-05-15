@@ -8,6 +8,7 @@ public class test{
     public static void main(String []args) throws Exception{
         try{
             Writer a = new FileWriter("File.txt");
+            //ukoliko kao drugi parametar BufferedWriter unesemo true onda se vrsi append opcija
             BufferedWriter b = new BufferedWriter(a);
 
             b.write("Alo\n");
