@@ -1,0 +1,64 @@
+KONKURENTNO PROGRAMIRANJE:
+	- IZVRSAVANJE RAZLICITIH APLIKACIJA ISTOVREMENO
+
+APLIKACIJA JE RAZLICITA NIJE ISTO STO I PROCES, JER APLIKACIJA MOZE DA IMA VISE PROCESA
+
+SVAKI PROCES IMA BAR JEDNU NIT
+
+KLASA: JAVA.LANG.THREAD
+
+KREIRANJE NITI:
+	- NASLJEDJIVANJE KLASE THREAD
+		- nije moguce da se ova klasa nasljedjuje
+	- IMPLEMENTACIJOM INTERFEJSA JAVA.LANG.RUNNABLE
+		- kod ovoga je moguce da se naslijedi
+		- koristiti ako samo treba implementirati metodu RUN
+		- ima samo: void run()
+
+NITI CINE IZVRSNO OKRUZENJE ASINHRONIM - TJ VISE OPERACIJA ODJEDNOM SE IZVRSAVA 
+	- SUPROTNO SINHRONIZACIJI
+
+VRSTE NITI:
+	1. KORISNICKE
+	2. DEMONSKE
+1.
+	- kreirani su od aplikacije ili korisnika
+	- JVM (java virtual machine) nece zavrsiti dok se one ne izvrse
+2.
+	- niti koje rade u pozadini
+	- kreirani od strane JVM
+	- nizeg prioriteta
+	- JVM nece cekati da se zavrse ove niti
+	- METODE:
+		- void setDaemon(boolean status)
+		- boolean isDaemon()
+	- Primjer:
+		DaemonThread a1 = new DaemonThread("something1");
+		DaemonThread a2 = new DaemonThread("something2");
+		a1.setDaemon(true); //i sada je a1 daemon thread
+		a2 //je user thread
+
+STANJA NITI:
+	- NEW - nit je kreirana ali jos nije pokrenuta
+	- RUNNABLE 
+		- QUEUED - resursi su svi tu ali se ceka CPU
+		- RUNNING - izvrsavanje
+	- NON-RUNNABLE
+		- SLEEPING 
+			- nit spava - ceka poruku druge niti, u ovom stanju se moze biti odgovarajuci vrmeneski period
+		- WAITING FOR NOTIFICATION 
+			- moze se biti beskonacno u ovom Thread.State-u
+		- BLOCKED 
+			- zbog nekig drugih operacija
+	- DEAD
+		- unistenje niti
+
+Thread.State getState() - vraca stanje u kom se nit nalazi
+
+State - ENUM:
+	- NEW
+	- TERMINATED
+	- WAITING
+	- BLOCKED
+	- RUNNABLE
+	- TIMED_WAITING //SLEEP
