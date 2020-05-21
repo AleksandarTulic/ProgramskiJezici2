@@ -88,3 +88,31 @@ public class generic {
         ispis(b);
     }
 }
+
+/*
+
+public class generic {
+    public static void main(String []args){
+        something<Integer> a = new something<Integer>(12);
+        System.out.println(a);
+        something<Double> b = new something<Double>(99.7);
+        System.out.println(b);
+        something<Boolean> c = new something<Boolean>(true);
+        System.out.println(c);
+    }
+}
+
+class something<K>{
+    private K value;
+
+    public something(){}
+
+    public something(K value){ this.value = value; }
+
+    @Override
+    public String toString(){
+        return "Vrijednost: " + value;
+    }
+}
+
+*/
