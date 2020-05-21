@@ -94,8 +94,7 @@ public class something{
         test a = new test();
         test b = new test();
 
-        //kada bi smo napisali samo ovo a.start() i b.start() onda bi se prvo izvrsio a pa onda b
-        //jer prvo je pokrenut a, a onda b
+        //kada bi bilo samo a i b ovo start onda redoslijed nije unaprijed nama poznat
         a.start();
         b.start();
 
