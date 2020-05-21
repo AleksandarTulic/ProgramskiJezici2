@@ -1,5 +1,4 @@
 /*
-
     - COLLECTION
         - SET
             - SORTEDSET
@@ -7,12 +6,11 @@
         - LIST
         - QUEUE
         - DEQUE
-
 */
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Iterator;
+import java.lang.reflect.Array;
+import java.util.*;
+import java.util.function.UnaryOperator;
 
 public class Kolekcija{
     public static void main(String []args){
@@ -41,7 +39,7 @@ public class Kolekcija{
         System.out.println("Da li sadrzi element 60: " + a.contains(60));
 
         Collection<Integer> b = new ArrayList<Integer>();
-        b.add(3); b.add(6); b.add(12);
+        b.add(3); b.add(6); b.add(12); b.add(45); b.add(789); b.add(-450); b.add(12);
 
         Collection<Integer> c = new ArrayList<Integer>();
         c.add(60); c.add(6); c.add(12);
@@ -58,5 +56,42 @@ public class Kolekcija{
         for (Object buff : niz){
             System.out.println(buff);
         }
+
+        String arr = "Danas je suncan dan :)";
+        System.out.println("Stari String je: " + arr);
+
+        //zamjenjuje sve instance a sa A
+        System.out.println("Novi String je: " + arr.replaceAll("a", "A"));
+
+        List<String> arr1 = new ArrayList<String>(Arrays.asList("Kuca", "PA VeLis", "Ovde VRUce"));
+
+        System.out.println(arr1);
+
+        //dva razlicita nacina da se implementira transformacija u mala slova
+        //arr1.replaceAll(e->e.toLowerCase());
+        arr1.replaceAll(new MyOperator());
+
+        System.out.println(arr1);
+
+        //popunjava niz sa elementima drugog parametra sa onolikom velicinom koliku imaju
+        //u nasem slucaju tri
+        Collections.fill(arr1, "Something has happened");
+
+        System.out.println(arr1);
+
+        List <String> arr2 = new ArrayList<String>(100);
+        Collections.fill(arr2, "DO");
+
+        //iako smo gore inijalizovali da je kapacitet 100 ono nece staviti vrijednosti
+        //zato sto prethodno nije bilo nikakvih elemenata
+        //tj referenci na koje da pokazuje
+        System.out.println(arr2);
+    }
+}
+
+class MyOperator implements UnaryOperator<String> {
+    @Override
+    public String apply(String t){
+        return t.toLowerCase();
     }
 }
