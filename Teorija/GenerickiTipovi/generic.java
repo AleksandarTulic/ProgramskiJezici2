@@ -69,4 +69,22 @@
 
 */
 public class generic {
+    public static void ispis(List <?> list){
+        System.out.println(list);
+    }
+
+    public static void main(String []args){
+        List<Integer> a = new ArrayList<Integer>();
+        for (int i=1;i<=9;i++){
+            a.add(i);
+        }
+
+        List<Double> b = new ArrayList<Double>();
+        for (double i=1.0;i<=2;i+=0.1) {
+            b.add(i);
+        }
+
+        ispis(a);
+        ispis(b);
+    }
 }
