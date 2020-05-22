@@ -1,0 +1,138 @@
+ZASTICENI REGION
+	- KOORDINACIJA AKCIJA NITI
+	- OVO JE DIO KODA U KOME NIT KOJA PRISTUPI MOZE DA MIJENJA ZAJEDNICKE PODATKE
+	- DA BI PRISTUPILA POTREBNO JE DA JE NEKI FLAG = TRUE
+	- U SUPROTNOM REGION JE VEC ZAUZET PA SE CEKA
+	
+SUSPENDOVANJE NITI
+	- DA BI SE SUSPENDOVALA NIT MOZE SE KORISTITI NAREDBA WAIT()
+	- KOJA SUSPENDUJE TRENUTNU NIT DOK DRUGA NE POSALJE OBAVJESTENJE DA SE NEKI DOGADJAJ DESIO 
+	- NAREDBA WAIT MORA BITI POZVANA IZ SINHRONIZOVANOG BLOKA ILI METODE
+
+WAIT()
+	- MOZE BITI POZVANA NAD OBJEKTOM, PRI CEMU SE POZIV MORA IZVRSITI IZ SINHRONIZOVANOG BLOKA
+	- OTPUSTA LOCK TAKO DA NEKI DRUGA NIT MOZE PRISTUPITI
+	- OVDE NIT MOZEMO PROBUDITI TAKO STO KORISTIMO METODE:
+		- NOTIFY()
+		- NOTIFYALL()
+			- MORAJU BITI POZVANE IZ SINHRONIZOVANOG KONTEKSTA
+SLEEP()
+	- MOZE BITI POZVANA IZ BILO KOG KONTEKSTA
+	- PAUZIRA TRENUTNI NIT I NE OTPUSTA LOCK
+	- KADA KORISTIMO SLEEP, NIT POCINJE POSLIJE DEF. VREMENSKOG INTERVALA
+
+NOTIFY()
+	- OBAVJESTAVA NIT KOJA JE PRVA POZVALA WAIT() DA MOZE DA NASTAVI DA SE IZVRSAVA
+	- ALI ONA SE TEK NASTVALJA IZVRSAVATI KAD NIT KOJA SE TRENUTNO ZIVRSAVA IZADJE IZ SINHRONIZOVANOG DIJELA
+NOTIFYALL()
+	- ISTO KAO PRETHODNO
+	- SAMO STO SADA SE POZIVAJU SVI PROCESI, TJ SVI IMAJU JEDNAK PRISTUP(OSIM AKO SMO RADILI NESTO SA SETPRIORITY)
+
+public class generic{
+    public static void main(String []args){
+        try{
+            test a = new test();
+            test.examples();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+}
+
+class test extends Thread{
+    private static Object lock = new Object();
+
+
+    public static void examples() throws InterruptedException{
+        Thread.sleep(1000);
+        System.out.println("Trenutna nit: " + Thread.currentThread().getName() + " je pozvana poslije spavanja 1 sekunde!!!");
+
+        synchronized (lock){
+            lock.wait(1000);
+            System.out.println("Trenutna nit: " + lock + " je pozvana poslije cekanja 1 sekunde!!!");
+        }
+    }
+
+}
+
+--------------------------------------------------------------------------------------------------------------
+
+public class generic{
+    public static void main(String []args){
+        try{
+            test []a = new test[3];
+
+            for (int i=0;i<3;i++){
+                a[i] = new test();
+                a[i].start();
+
+                int br = 0;
+                while ( br < 1000 ){
+                    br++;
+                }
+
+                System.out.println((i + 1) + "Vrijednost: " + br);
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+}
+
+class test extends Thread{
+    public static int lock;
+
+    public void run(){
+        try{
+            System.out.println("Trenutna nit: " + Thread.currentThread().getName());
+            System.out.println("Trenutna nit: " + Thread.currentThread().getName());
+
+            synchronized (this){
+                wait(2000);
+                notify();
+            }
+
+            System.out.println("Trenutna nit: " + Thread.currentThread().getName());
+            System.out.println("Trenutna nit: " + Thread.currentThread().getName());
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+}
+
+ISPIS:
+
+Trenutna nit: Thread-0
+Trenutna nit: Thread-0
+1Vrijednost: 1000
+2Vrijednost: 1000
+3Vrijednost: 1000
+Trenutna nit: Thread-1
+Trenutna nit: Thread-1
+Trenutna nit: Thread-2
+Trenutna nit: Thread-2
+Trenutna nit: Thread-0
+Trenutna nit: Thread-0
+Trenutna nit: Thread-1
+Trenutna nit: Thread-2
+Trenutna nit: Thread-2
+Trenutna nit: Thread-1
+
+//PRETHODNO NAVEDENI KOD NE MORA ISPISIVATI PRVO THREAD-0, MOZE I 1 ILI 2 
+//KADA URADIMO WAIT() ONDA TAJ THREAD PRESTAJE IZVRSAVATI KOD NAS 2 SEKUNDE
+//A POSTO JE NJEGOV PRETHODNIK MAIN THREAD ONDA SE ON IZVRSAVA
+//A ON SE DESAVA KADA SE IZVRSE SVE TRI VRSTE THREAD PO DVA ISPISA
+//BROJ CESTO CE SE U NASEM SLUCAJU IZVRSITI THREAD 0 JER ON PRVI DOLAZI NA RED TJ PRVI JE POKRENUO WAIT NAREDBU
+
+OPIS KRETANJA:
+	- PRVO SE POZIVA THREAD-0 SKORO U SVAKOM SLUCAJU 
+	- PA ONDA DOCE U WAIT GDJE PAUZIRA 2 SEKUNDE
+	- ZA TO VRIJEME POZICNJE IZVRSAVANJE THREAD-1 ILI 2
+	- KOJI TAKODJE DOLAZE DO WAIT(2000)
+	- KADA THREAD-0 VRSI NOTIFY NEMA PRIJE NJEGA DA JE NEKO POKRENUO WAIT PA ON SE NASTAVLJA IZVRSAVATI
+	- ONDA KADA DODJU DO THREAD-1 ILI 2 I ONI VRSE NOTIFY YJ POZIVAJU NPR THREAD-0 ALI ON JE VEC U STANJU TERMINATED
+	- I ONDA SE NA RAZLICIT NACIN IZVRSAVAJU OVA DVA THREAD-A
+
+KADA SE IZVRSE SVI THREAD-OVI PO 2 PUTA ONDA SE PAUZIRA TJ NE IZVRSAVA SE NI JEDNA NAREDBA JER NOTIFY JE POSLIJE WAIT
+THREAD-1 BI POZVAO SA NOTIFU NPR THREAD-0 ALI JE THREAD-0 U VECINI SLUCAJEVA DODAO PRVI PA SE VEC IZVRSIO
+MOZEMO RECI DA GA NEMA U TOME QUEUE TJ U REDU CEKANJA NA IZVRSVANJE
