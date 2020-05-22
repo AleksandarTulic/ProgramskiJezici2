@@ -1,0 +1,80 @@
+ODLOZENO, PERIODICNO IZVRSAVANJE
+
+TIMER KLASA - ZA IZVRSAVANJE ZADATAKA U BUDUCNOSTI
+	- ONI SE IZVRSAVAJU KAO POZADISNKE NITI
+		- MOGU SAMO JEDNOM
+		- PERIODICNO U ZADATIM VR. INTERVALIMA
+		- U TACNO ZADATOM VREMENSKOM TRENUTKU
+
+OBJEKAT OVE KLASE JE POZADINSKA NIT KOJA IZVRSAVA SVE ZADATKE - SEKVENCIJALNO -
+VISESTRUKE NITI MOGU DA DIJELE JEDAN OBJEKAT - NIJE POTREBNA EKSTERNA SINHRONIZACIJA
+
+APSTRAKTNA KLASA TIMETTASK
+	- PREDSTVALJA ZADATAK KOJI TREBA DA BUDE IZVRSEN ON STRANE OBJEKTA KLASE TIMER
+
+KONTRUKTORI TIMER
+	- TIMER()
+	- TIMER(BOOLEAN ISDAEMON)
+	- TIMER(STRING NAME)
+	- TIMER(NAME, BOOLEAN ISDAEMON)
+
+--------------------------------------------------------------------------------------------
+
+import java.util.Timer;
+import java.util.TimerTask;
+
+public class generic{
+    public static void main(String []args){
+        Timer a = new Timer("nit A");
+
+	//prvi parametar je objekat klase nad kojim se vrsi periodicna operacija
+	//kada pocinje da se izvrsava
+	//i nakon svaih 1,5 sekundi se ponovo ponavlja
+        a.schedule(new test(), 2000, 1500);
+    }
+}
+
+class test extends TimerTask{
+    public static int time = 0;
+    public void run(){
+        System.out.println("Ispis: " + time);
+        time+=2;
+    }
+}
+
+--------------------------------------------------------------------------------------------
+
+schedule(TimerTask task, long delay, long period)
+schedule(TimerTask task, long delay)
+.cancel() 
+	- prekida timer, odbacuje sve poslove koje treba da se izvrse
+.purge()
+	- odbacuje sve odbijene poslove iz timer-a
+
+--------------------------------------------------------------------------------------------
+
+import java.util.Timer;
+import java.util.TimerTask;
+
+public class generic{
+    public static void main(String []args){
+        Timer a = new Timer();
+        TimerTask b = new TimerTask() {
+            @Override
+            public void run() {
+                for (int i=0;i<5;i++){
+                    System.out.println("Timer working");
+
+                    if ( i == 3 ){
+                        System.out.println("Prekid rada");
+                        a.cancel();
+                    }
+                }
+                
+                System.out.println("Purge: " + a.purge());
+            }
+        };
+
+        a.schedule(b, 1000, 2000);
+    }
+}
