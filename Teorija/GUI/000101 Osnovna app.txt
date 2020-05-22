@@ -1,0 +1,60 @@
+EVENT DRIVEN MODEL
+	- KORISNICKI INTERFEJS KOD GUI APLIKACIJA JE UPRAVLJAN DOGADJAJIMA
+	- PISU SE METODE KOJE SE IZVRSAVAJU PO POJAVI NEKOG DOGADJAJA KORISNICKOG INTERFEJSA - KLIK MISA, TASTATURE
+	- PROGRAM SE IZVRSAVA KADA SE DESI TA ODGOVARAJUCA AKCIJA
+
+DOGADJAJI SE OPISUJU EVENT KLASAMA ZA SVAKU VRSTU DOGADJAJA DEFINISANA JE POSEBNA KLASA 
+	- KEYEVENT KLASA
+	- MOUSEEVENT KLASA
+
+SVAKA AKCIJA NAD KOMPONENTAMA KORISNICKOG INTERFEJSA IZAZIVA GENERISANJE OBJEKATA KLASA NASLJEDNICA EVENT KLASE
+
+IZVRSAVANJE:
+	- POCINJE SA MAIN() METODOM
+	- TU SE NAJCESCE I INICIJALIZUJE GLAVNI PROZOR APLIKACIJE
+
+-------------------------------------------------------------------------------------------------
+
+public class form1 extends JFrame{
+    public form1(){
+        setSize(200, 200);
+        setTitle("Aplikacija");
+    }
+
+    public static void main(String[] args) {
+        form1 a = new form1();
+        a.setVisible(true);
+    }
+}
+
+
+
+-------------------------------------------------------------------------------------------------
+
+
+
+import java.awt.*;
+import javax.swing.*;
+
+public class form1 extends JFrame{
+    private JButton button1 = new JButton("Klik");
+    private JButton button2 = new JButton("EXIT");
+
+
+    public form1(){
+        setSize(400, 400);
+        setTitle("Aplikacija");
+
+        getContentPane().add(button1, BorderLayout.WEST);
+        getContentPane().add(button2, BorderLayout.EAST);
+    }
+
+    public static void main(String[] args) {
+        form1 a = new form1();
+        a.setVisible(true);
+    }
+}
+
+
+-------------------------------------------------------------------------------------------------
+
