@@ -40,3 +40,24 @@ class MyListener implements ActionListener{
         System.exit(0);
     }
 }
+
+TIP DOGADJAJA                   LISTENER
+ACTIONEVENT                     ACTIONLISTENER
+    - ACTIONPERFORMED()
+ADJUSTMENTEVENT                 ADJUSTMENTLISTENER
+    - ADJUSTMENTVALUECHANGED()
+COMPONENTEVENT                  COMPONENTLISTENER
+    - COMPONENTHIDDEN()
+    - COMPONENTMOVED()
+    - COMPONENTRESIZED()
+KEYEVENT                        KEYLISTENER
+    - KEYPRESSED()
+    - KEYRELEASED()
+    - KEYTYPED()
+MOUSEEVENT                      MOUSELISTENER
+    - MOUSECLICKED()
+    - MOUSEPRESSED()
+    - MOUSERELEASED()
+WINDOWEVENT                     WINDOWLISTENER
+ITEMEVENT                       ITEMLISTENER
+TEXTEVENT                       TEXTLISTENER
