@@ -1,0 +1,3 @@
+>>>Proizvodjac|Some1<<<
+>>>Vrsta|Some2<<<
+>>>Proizvod|445544|Some3|22as.78|19.99<<<
