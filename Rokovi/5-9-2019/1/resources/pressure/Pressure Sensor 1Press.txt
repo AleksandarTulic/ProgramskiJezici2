@@ -1,0 +1,58 @@
+Jan 28, 2022 4:00:48 PM sensor.Press_S logValue
+INFO: Pressure: 20 , MEAN: 20.0
+Jan 28, 2022 4:00:49 PM sensor.Press_S logValue
+INFO: Pressure: 20 20 , MEAN: 20.0
+Jan 28, 2022 4:00:49 PM sensor.Press_S logValue
+INFO: Pressure: 20 20 20 , MEAN: 20.0
+Jan 28, 2022 4:00:50 PM sensor.Press_S logValue
+INFO: Pressure: 20 20 20 17 , MEAN: 19.25
+Jan 28, 2022 4:00:50 PM sensor.Press_S logValue
+INFO: Pressure: 20 20 20 17 17 , MEAN: 18.8
+Jan 28, 2022 4:00:51 PM sensor.Press_S logValue
+INFO: Pressure: 20 20 17 17 18 , MEAN: 18.4
+Jan 28, 2022 4:00:51 PM sensor.Press_S logValue
+INFO: Pressure: 20 17 17 18 18 , MEAN: 18.0
+Jan 28, 2022 4:00:52 PM sensor.Press_S logValue
+INFO: Pressure: 17 17 18 18 18 , MEAN: 17.6
+Jan 28, 2022 4:00:52 PM sensor.Press_S logValue
+INFO: Pressure: 17 18 18 18 18 , MEAN: 17.8
+Jan 28, 2022 4:00:53 PM sensor.Press_S logValue
+INFO: Pressure: 18 18 18 18 21 , MEAN: 18.6
+Jan 28, 2022 4:00:53 PM sensor.Press_S logValue
+INFO: Pressure: 18 18 18 21 21 , MEAN: 19.2
+Jan 28, 2022 4:00:54 PM sensor.Press_S logValue
+INFO: Pressure: 18 18 21 21 20 , MEAN: 19.6
+Jan 28, 2022 4:00:54 PM sensor.Press_S logValue
+INFO: Pressure: 18 21 21 20 20 , MEAN: 20.0
+Jan 28, 2022 4:00:55 PM sensor.Press_S logValue
+INFO: Pressure: 21 21 20 20 19 , MEAN: 20.2
+Jan 28, 2022 4:00:55 PM sensor.Press_S logValue
+INFO: Pressure: 21 20 20 19 19 , MEAN: 19.8
+Jan 28, 2022 4:00:56 PM sensor.Press_S logValue
+INFO: Pressure: 20 20 19 19 19 , MEAN: 19.4
+Jan 28, 2022 4:00:56 PM sensor.Press_S logValue
+INFO: Pressure: 20 19 19 19 19 , MEAN: 19.2
+Jan 28, 2022 4:00:57 PM sensor.Press_S logValue
+INFO: Pressure: 19 19 19 19 19 , MEAN: 19.0
+Jan 28, 2022 4:00:57 PM sensor.Press_S logValue
+INFO: Pressure: 19 19 19 19 19 , MEAN: 19.0
+Jan 28, 2022 4:00:58 PM sensor.Press_S logValue
+INFO: Pressure: 19 19 19 19 17 , MEAN: 18.6
+Jan 28, 2022 4:00:59 PM sensor.Press_S logValue
+INFO: Pressure: 19 19 19 17 17 , MEAN: 18.2
+Jan 28, 2022 4:00:59 PM sensor.Press_S logValue
+INFO: Pressure: 19 19 17 17 18 , MEAN: 18.0
+Jan 28, 2022 4:01:00 PM sensor.Press_S logValue
+INFO: Pressure: 19 17 17 18 18 , MEAN: 17.8
+Jan 28, 2022 4:01:00 PM sensor.Press_S logValue
+INFO: Pressure: 17 17 18 18 19 , MEAN: 17.8
+Jan 28, 2022 4:01:01 PM sensor.Press_S logValue
+INFO: Pressure: 17 18 18 19 19 , MEAN: 18.2
+Jan 28, 2022 4:01:01 PM sensor.Press_S logValue
+INFO: Pressure: 18 18 19 19 20 , MEAN: 18.8
+Jan 28, 2022 4:01:02 PM sensor.Press_S logValue
+INFO: Pressure: 18 19 19 20 20 , MEAN: 19.2
+Jan 28, 2022 4:01:02 PM sensor.Press_S logValue
+INFO: Pressure: 19 19 20 20 20 , MEAN: 19.6
+Jan 28, 2022 4:01:03 PM sensor.Press_S logValue
+INFO: Pressure: 19 20 20 20 20 , MEAN: 19.8

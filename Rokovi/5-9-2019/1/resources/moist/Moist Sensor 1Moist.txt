@@ -1,0 +1,58 @@
+Jan 28, 2022 4:00:48 PM sensor.Moist_S logValue
+INFO: Moist Value Now: 69
+Jan 28, 2022 4:00:49 PM sensor.Moist_S logValue
+INFO: Moist Value Now: 35
+Jan 28, 2022 4:00:49 PM sensor.Moist_S logValue
+INFO: Moist Value Now: 35
+Jan 28, 2022 4:00:50 PM sensor.Moist_S logValue
+INFO: Moist Value Now: 81
+Jan 28, 2022 4:00:50 PM sensor.Moist_S logValue
+INFO: Moist Value Now: 81
+Jan 28, 2022 4:00:51 PM sensor.Moist_S logValue
+INFO: Moist Value Now: 33
+Jan 28, 2022 4:00:51 PM sensor.Moist_S logValue
+INFO: Moist Value Now: 33
+Jan 28, 2022 4:00:52 PM sensor.Moist_S logValue
+INFO: Moist Value Now: 24
+Jan 28, 2022 4:00:52 PM sensor.Moist_S logValue
+INFO: Moist Value Now: 24
+Jan 28, 2022 4:00:53 PM sensor.Moist_S logValue
+INFO: Moist Value Now: 23
+Jan 28, 2022 4:00:53 PM sensor.Moist_S logValue
+INFO: Moist Value Now: 23
+Jan 28, 2022 4:00:54 PM sensor.Moist_S logValue
+INFO: Moist Value Now: 100
+Jan 28, 2022 4:00:54 PM sensor.Moist_S logValue
+INFO: Moist Value Now: 100
+Jan 28, 2022 4:00:55 PM sensor.Moist_S logValue
+INFO: Moist Value Now: 77
+Jan 28, 2022 4:00:55 PM sensor.Moist_S logValue
+INFO: Moist Value Now: 77
+Jan 28, 2022 4:00:56 PM sensor.Moist_S logValue
+INFO: Moist Value Now: 44
+Jan 28, 2022 4:00:56 PM sensor.Moist_S logValue
+INFO: Moist Value Now: 44
+Jan 28, 2022 4:00:57 PM sensor.Moist_S logValue
+INFO: Moist Value Now: 57
+Jan 28, 2022 4:00:57 PM sensor.Moist_S logValue
+INFO: Moist Value Now: 57
+Jan 28, 2022 4:00:58 PM sensor.Moist_S logValue
+INFO: Moist Value Now: 28
+Jan 28, 2022 4:00:59 PM sensor.Moist_S logValue
+INFO: Moist Value Now: 28
+Jan 28, 2022 4:00:59 PM sensor.Moist_S logValue
+INFO: Moist Value Now: 93
+Jan 28, 2022 4:01:00 PM sensor.Moist_S logValue
+INFO: Moist Value Now: 93
+Jan 28, 2022 4:01:00 PM sensor.Moist_S logValue
+INFO: Moist Value Now: 81
+Jan 28, 2022 4:01:01 PM sensor.Moist_S logValue
+INFO: Moist Value Now: 81
+Jan 28, 2022 4:01:01 PM sensor.Moist_S logValue
+INFO: Moist Value Now: 74
+Jan 28, 2022 4:01:02 PM sensor.Moist_S logValue
+INFO: Moist Value Now: 74
+Jan 28, 2022 4:01:02 PM sensor.Moist_S logValue
+INFO: Moist Value Now: 40
+Jan 28, 2022 4:01:03 PM sensor.Moist_S logValue
+INFO: Moist Value Now: 40

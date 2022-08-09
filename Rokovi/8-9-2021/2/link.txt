@@ -1,8 +1,0 @@
-https://www.baeldung.com/java-stream-reduce
-https://mkyong.com/java8/java-8-collectors-groupingby-and-mapping-example/
-https://mkyong.com/java/how-to-sort-a-map-in-java/
-https://blog.devgenius.io/15-practical-exercises-help-you-master-java-stream-api-3f9c86b1cf82
-https://java2blog.com/java-8-stream/#sorted
-https://howtodoinjava.com/java/sort/java-sort-map-by-values/
-https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collectors.html
-https://javadevcentral.com/collectors-partitioningby-in-java

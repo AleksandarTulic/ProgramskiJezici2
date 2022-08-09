@@ -1,0 +1,58 @@
+Jan 28, 2022 4:00:48 PM sensor.Temp_S logValue
+INFO: Temparature: 28 
+Jan 28, 2022 4:00:49 PM sensor.Temp_S logValue
+INFO: Temparature: 28 13 
+Jan 28, 2022 4:00:49 PM sensor.Temp_S logValue
+INFO: Temparature: 28 13 13 
+Jan 28, 2022 4:00:50 PM sensor.Temp_S logValue
+INFO: Temparature: 28 13 13 22 
+Jan 28, 2022 4:00:50 PM sensor.Temp_S logValue
+INFO: Temparature: 28 13 13 22 22 
+Jan 28, 2022 4:00:51 PM sensor.Temp_S logValue
+INFO: Temparature: 28 13 13 22 22 23 
+Jan 28, 2022 4:00:51 PM sensor.Temp_S logValue
+INFO: Temparature: 28 13 13 22 22 23 23 
+Jan 28, 2022 4:00:52 PM sensor.Temp_S logValue
+INFO: Temparature: 28 13 13 22 22 23 23 35 
+Jan 28, 2022 4:00:52 PM sensor.Temp_S logValue
+INFO: Temparature: 28 13 13 22 22 23 23 35 35 
+Jan 28, 2022 4:00:53 PM sensor.Temp_S logValue
+INFO: Temparature: 28 13 13 22 22 23 23 35 35 26 
+Jan 28, 2022 4:00:53 PM sensor.Temp_S logValue
+INFO: Temparature: 13 13 22 22 23 23 35 35 26 26 
+Jan 28, 2022 4:00:54 PM sensor.Temp_S logValue
+INFO: Temparature: 13 22 22 23 23 35 35 26 26 22 
+Jan 28, 2022 4:00:54 PM sensor.Temp_S logValue
+INFO: Temparature: 22 22 23 23 35 35 26 26 22 22 
+Jan 28, 2022 4:00:55 PM sensor.Temp_S logValue
+INFO: Temparature: 22 23 23 35 35 26 26 22 22 13 
+Jan 28, 2022 4:00:55 PM sensor.Temp_S logValue
+INFO: Temparature: 23 23 35 35 26 26 22 22 13 13 
+Jan 28, 2022 4:00:56 PM sensor.Temp_S logValue
+INFO: Temparature: 23 35 35 26 26 22 22 13 13 21 
+Jan 28, 2022 4:00:56 PM sensor.Temp_S logValue
+INFO: Temparature: 35 35 26 26 22 22 13 13 21 21 
+Jan 28, 2022 4:00:57 PM sensor.Temp_S logValue
+INFO: Temparature: 35 26 26 22 22 13 13 21 21 11 
+Jan 28, 2022 4:00:57 PM sensor.Temp_S logValue
+INFO: Temparature: 26 26 22 22 13 13 21 21 11 11 
+Jan 28, 2022 4:00:58 PM sensor.Temp_S logValue
+INFO: Temparature: 26 22 22 13 13 21 21 11 11 10 
+Jan 28, 2022 4:00:59 PM sensor.Temp_S logValue
+INFO: Temparature: 22 22 13 13 21 21 11 11 10 10 
+Jan 28, 2022 4:00:59 PM sensor.Temp_S logValue
+INFO: Temparature: 22 13 13 21 21 11 11 10 10 34 
+Jan 28, 2022 4:01:00 PM sensor.Temp_S logValue
+INFO: Temparature: 13 13 21 21 11 11 10 10 34 34 
+Jan 28, 2022 4:01:00 PM sensor.Temp_S logValue
+INFO: Temparature: 13 21 21 11 11 10 10 34 34 13 
+Jan 28, 2022 4:01:01 PM sensor.Temp_S logValue
+INFO: Temparature: 21 21 11 11 10 10 34 34 13 13 
+Jan 28, 2022 4:01:01 PM sensor.Temp_S logValue
+INFO: Temparature: 21 11 11 10 10 34 34 13 13 21 
+Jan 28, 2022 4:01:02 PM sensor.Temp_S logValue
+INFO: Temparature: 11 11 10 10 34 34 13 13 21 21 
+Jan 28, 2022 4:01:02 PM sensor.Temp_S logValue
+INFO: Temparature: 11 10 10 34 34 13 13 21 21 9 
+Jan 28, 2022 4:01:03 PM sensor.Temp_S logValue
+INFO: Temparature: 10 10 34 34 13 13 21 21 9 9 

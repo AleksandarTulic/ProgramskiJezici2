@@ -1,0 +1,5 @@
+public enum TipKretanja{
+	SAMO_U_JEDNOM_REDU,
+	DIJAGONALNO,
+	KROZ_CIJELU_MATRICU
+}
