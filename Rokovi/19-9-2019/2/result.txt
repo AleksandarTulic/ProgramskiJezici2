@@ -1,0 +1,48 @@
+===== Buffer Overflow:
+
+https://owasp.org/www-community/vulnerabilities/Buffer_Overflow#:~:text=Buffer%20Overflow%20and%20Web%20Applications,effectively%20taking%20over%20the%20machine.
+https://www.whitelist1.com/2018/04/buffer-overflows-and-web-applications.html
+===== Path Traversal:
+https://owasp.org/www-community/attacks/Path_Traversal
+===== Web service attacks
+https://www.soapui.org/docs/soap-and-wsdl/working-with-wsdls/
+https://www.w3schools.com/XML/xml_wsdl.asp
+https://www.ibm.com/docs/en/cics-ts/5.2?topic=services-what-is-web-service
+https://www.tutorialspoint.com/soap/what_is_soap.htm
+https://www.tutorialspoint.com/xml/xml_dtds.htm#:~:text=Syntax%201%20The%20DTD%20starts%20with%20%3C%21DOCTYPE%20delimiter.,file%20on%20the%20internet.%20...%20More%20items...%20
+https://www.ws-attacks.org/Web_Service_Attacks_By_Category
+https://ws-attacks.org/Coercive_Parsing
+https://en.wikipedia.org/wiki/Billion_laughs_attack
+Web aplaikacije:
+	- admin
+		- da ima neke osnovne uloge kao dodavanje novog zubara, brisanje update, ...
+		- da moze da dodaje neke nove treatment-e, neke nove probleme, zube i sl, kao i opcije za brisanje i dodavanje ...
+		- da moze da postavlja smjene rada za zubare kao i (CRUD operations)
+		- login bi trebalo da bude multifaktorski, ako ce biti dostupno sa neta, kao npr username password, QR code ili da admin ima sertifikat
+		- ukoliko se koristi na privatnoj mrezi onda samo username i password
+		- takodje ako je preko interneta dostupan web app onda mora se ograniciti da samo korisnici sa odgovarajucih ip adresa mogu da pristupe
+	- korisnik/pacijent
+		- moze samo da dodaje termin kada bi htio da dodje, npr odabere termin, onda selektuje kod kog zubara zeli da se najavi i ENTER
+		- VAZNO: da li da odvojim db na dva dijela, gdje bi ovaj koji koriste pacijenti imao samo pristup appointments i tabeli pacijenti(ovo bih radio jer onda je mala sansa da se napravi neka greska dok
+ovim tabelama mogli bi da pristupaju zubari)
+Salter osoba bi takodje bio potreban radnik koja bi mogla da radi operacije koje je radio korisnik, samo dodatno moze da odradi CRUD operations na tim elementima
+	- za nju napraviti desktop app koja se nalazi na privatnoj mrezi, neka app bude odvojena od one koju zubar koristi jer on ima pristup vecini
+Da li ovde treba raditi anamnezu?
+Takodje tabela user ce se podijeliti na dva dijela necu je ni koristiti zato sto kada admin zeli da uzme podatke on takodje prolazi kroz redove koje sadrze informacije korisnika(jeste da se informacije ponavljaju ali veca sigurnost)
+Bill:
+	- getDateTimeBill
+		- int id
+		- VRACA: List<string>
+	- insertBill
+		- bill.Bill Bill
+		- VRACA: bool
+LastSeen:
+	- getLastSeen
+		- int visitId
+		- VRACA: List<List<string> >
+	- insertLastSeen
+		- string dentistJmb
+	- 
+Dentist:
+	- checkDentistWorks
+		- Date date
